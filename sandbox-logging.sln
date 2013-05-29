@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Logging.Tests", "Sandbox.Logging.Tests\Sandbox.Logging.Tests.csproj", "{59F50AC3-2BDC-4F35-8630-273012C37EB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Logging", "Sandbox.Logging\Sandbox.Logging.csproj", "{2D94D0F4-1EC4-4E01-9EBC-BFE3A47505EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Logging.Log4Net", "Sandbox.Logging.Log4Net\Sandbox.Logging.Log4Net.csproj", "{026CF55A-AF9D-4DBF-B99D-A91E7694BEB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59F50AC3-2BDC-4F35-8630-273012C37EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F50AC3-2BDC-4F35-8630-273012C37EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F50AC3-2BDC-4F35-8630-273012C37EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F50AC3-2BDC-4F35-8630-273012C37EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D94D0F4-1EC4-4E01-9EBC-BFE3A47505EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D94D0F4-1EC4-4E01-9EBC-BFE3A47505EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D94D0F4-1EC4-4E01-9EBC-BFE3A47505EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D94D0F4-1EC4-4E01-9EBC-BFE3A47505EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{026CF55A-AF9D-4DBF-B99D-A91E7694BEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026CF55A-AF9D-4DBF-B99D-A91E7694BEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026CF55A-AF9D-4DBF-B99D-A91E7694BEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026CF55A-AF9D-4DBF-B99D-A91E7694BEB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
