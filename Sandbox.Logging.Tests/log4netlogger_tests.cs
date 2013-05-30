@@ -47,5 +47,25 @@ namespace Sandbox.Logging.Tests
 
             Assert.Equal("Money 1,02 €", message);
         }
+
+        [Fact]
+        public void handles_curly_brackets_when_no_args_are_passed()
+        {
+            const string jsonString = "{'Content':'JSON'}";
+            object message = null;
+            var ilogMock = new Mock<ILog>();
+            ilogMock
+                .Setup(o => o.IsDebugEnabled)
+                .Returns(true);
+            ilogMock
+                .Setup(o => o.Debug(It.IsAny<object>(), It.IsAny<Exception>()))
+                .Callback((object m, Exception ex) => { message = m; });
+
+            var logger = (ILogger) new Log4NetLogger(ilogMock.Object);
+
+            logger.Debug(m => m(jsonString));
+
+            Assert.Equal(jsonString, message);
+        }
     }
 }
