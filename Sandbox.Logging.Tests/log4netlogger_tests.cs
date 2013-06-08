@@ -1,9 +1,14 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using Moq;
 using Sandbox.Logging.Log4Net;
 using Xunit;
 using log4net;
+using log4net.Appender;
+using log4net.Config;
+using log4net.Core;
+using log4net.Repository.Hierarchy;
 
 namespace Sandbox.Logging.Tests
 {
@@ -66,6 +71,22 @@ namespace Sandbox.Logging.Tests
             logger.Debug(m => m(jsonString));
 
             Assert.Equal(jsonString, message);
+        }
+
+        [Fact]
+        public void with_a_real_log4net_log()
+        {
+            var appender = new MemoryAppender {Threshold = Level.All};
+            appender.ActivateOptions();
+            BasicConfigurator.Configure(appender);
+
+            var log = LogManager.GetLogger(GetType());
+
+            var logger = (ILogger)new Log4NetLogger(log);
+
+            logger.Debug(m => m("Hello {0}", "Bob"));
+
+            Assert.Equal("Hello Bob", appender.GetEvents().Single().MessageObject);
         }
     }
 }
